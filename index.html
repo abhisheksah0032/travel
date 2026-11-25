@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsPortal - Global News Locally</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='90' x='0' font-size='90' fill='%23d60000'>N</text></svg>">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="date-display" id="current-date">Loading Date...</div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>NewsPortal</h1>
+                    </a>
+                </div>
+                
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="category.html?type=politics">Politics</a></li>
+                        <li><a href="category.html?type=sports">Sports</a></li>
+                        <li><a href="category.html?type=entertainment">Entertainment</a></li>
+                        <li><a href="category.html?type=technology">Technology</a></li>
+                        <li><a href="category.html?type=business">Business</a></li>
+                        <li><a href="category.html?type=science">Science</a></li>
+                        <li><a href="category.html?type=world">World</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button id="search-toggle"><i class="fas fa-search"></i></button>
+                    <button id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-overlay" id="search-overlay">
+            <form action="search.html" method="GET">
+                <input type="text" name="query" placeholder="Type to search..." required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+            <button id="close-search"><i class="fas fa-times"></i></button>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="category.html?type=politics">Politics</a>
+            <a href="category.html?type=sports">Sports</a>
+            <a href="category.html?type=entertainment">Entertainment</a>
+            <a href="category.html?type=technology">Technology</a>
+            <a href="category.html?type=business">Business</a>
+            <a href="category.html?type=science">Science</a>
+            <a href="category.html?type=world">World</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+
+    <div class="breaking-news">
+        <div class="container">
+            <span class="ticker-label">Breaking News</span>
+            <div class="ticker-content" id="breaking-ticker">
+                <span>Loading latest headlines...</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        
+        <section class="featured-section" id="featured-container">
+            <div class="loading-placeholder">Loading Featured News...</div>
+        </section>
+
+        <div class="content-wrapper">
+            <div class="main-column">
+                <section class="latest-news">
+                    <div class="section-header">
+                        <h2>Latest News</h2>
+                    </div>
+                    
+                    <div class="news-grid" id="latest-news-grid">
+                        <div class="loading-placeholder">Loading Articles...</div>
+                    </div>
+                    
+                    <div class="pagination-container" id="pagination-controls"></div>
+                </section>
+            </div>
+
+            <aside class="sidebar">
+                
+                <div class="widget search-widget">
+                    <h3>Search</h3>
+                    <form action="search.html" method="GET">
+                        <input type="text" name="query" placeholder="Search news...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+
+                <div class="widget trending-widget">
+                    <h3>Trending Now</h3>
+                    <div id="trending-list">
+                        <p>Loading...</p>
+                    </div>
+                </div>
+
+                <div class="widget category-widget">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="category.html?type=politics">Politics <span>&rsaquo;</span></a></li>
+                        <li><a href="category.html?type=business">Business <span>&rsaquo;</span></a></li>
+                        <li><a href="category.html?type=technology">Technology <span>&rsaquo;</span></a></li>
+                        <li><a href="category.html?type=sports">Sports <span>&rsaquo;</span></a></li>
+                        <li><a href="category.html?type=entertainment">Entertainment <span>&rsaquo;</span></a></li>
+                        <li><a href="category.html?type=science">Science <span>&rsaquo;</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="widget ad-widget">
+                    <div class="ad-placeholder">
+                        <span>Advertisement Space</span>
+                    </div>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+    <div class="container footer-content">
+        <div class="footer-col">
+            <h3>NewsPortal</h3>
+            <p>Delivering the latest and most relevant news directly to your screen without the clutter.</p>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Categories</h3>
+            <ul>
+                <li><a href="category.html?type=technology">Technology</a></li>
+                <li><a href="category.html?type=business">Business</a></li>
+                <li><a href="category.html?type=sports">Sports</a></li>
+                <li><a href="category.html?type=politics">Politics</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 NewsPortal. All rights reserved.</p>
+    </div>
+    <button id="scroll-top"><i class="fas fa-arrow-up"></i></button>
+</footer>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
